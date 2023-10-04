@@ -3,7 +3,7 @@
 
 1. [Overview](https://github.com/The-Coldest-rn/The-Coldest-Milestone-1/tree/main#overview)
 2. [Product Specification](https://github.com/The-Coldest-rn/The-Coldest-Milestone-1/tree/main#product-specifications)
-3. [Wireframes](https://github.com/The-Coldest-rn/The-Coldest-Milestone-1/edit/main/README.md#wireframes)
+3. [Wireframes](https://github.com/The-Coldest-rn/The-Coldest-Milestone-1/blob/main/README.md#wireframes)
 
 
 ## Overview
