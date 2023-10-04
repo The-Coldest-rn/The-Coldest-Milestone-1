@@ -42,7 +42,7 @@ The Coldest presents an online marketplace which allows consumers to find local 
 - Settings Screen - Lets users change the language, and app notification settings.
 
 ### 3. Navigation
-**Tab Navigation**(Tab to Screen)
+**Tab Navigation** (Tab to Screen)
 - Profile
 - Search
 - Settings
@@ -50,7 +50,7 @@ The Coldest presents an online marketplace which allows consumers to find local 
 Optional:
 - Report a problem
 
-**Flow Navigation**(Screen to Screen)
+**Flow Navigation** (Screen to Screen)
 - Forced Log-in -> Account creation if no log-in is available.
 - Store Selection -> Jumps to store's page.
 - Profile -> Personal information to be modified (text field)
