@@ -17,4 +17,4 @@ The Coldest presents an online marketplace which allows consumers to find local 
 - Habit: This application can be seen being used daily or at a consumer's leisure mutch like shopping in a traditionall brick and mortar shopping mall.
 - Scope: First we will discuss what variety of stores are in demand currently, then we'll refine that list depending on the demand in that local area. Application will report frequently in order to keep up with local trends. 
   
-  j
+  test
