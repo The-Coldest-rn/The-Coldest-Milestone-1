@@ -65,5 +65,5 @@ Optional:
 ### 4. Schema
 
 ## Networking
-![Picture of network](Milestone Network.png)
+![Picture of network](Milestone_network.png)
   
