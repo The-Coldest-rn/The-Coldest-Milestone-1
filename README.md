@@ -60,9 +60,14 @@ Optional:
 ![Picture of Handwritten Wireframe](IMG_0827.jpg)
 
 ## Digital Wireframes and Mockups
-[Digital Wirefram](https://www.figma.com/file/IA5I96hQKE0vEcNrf4wRcu/The-Coldest-Market-WireFrame-(Copy)?type=whiteboard&node-id=0-1)
+[Digital Wireframe](https://www.figma.com/file/IA5I96hQKE0vEcNrf4wRcu/The-Coldest-Market-WireFrame-(Copy)?type=whiteboard&node-id=0-1)
 
-### 4. Schema
+## 4. Schema
+
+### Models
+
+**Post**
+[Schema](
 
 ## Networking
 ![Picture of network](Milestone_network.png)
