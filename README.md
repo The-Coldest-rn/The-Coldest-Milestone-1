@@ -67,7 +67,7 @@ Optional:
 ### Models
 
 **Post**
-[Schema](
+![Schema](SchemaModel.png)
 
 ## Networking
 ![Picture of network](Milestone_network.png)
