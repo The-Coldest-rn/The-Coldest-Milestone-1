@@ -6,7 +6,6 @@ import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.firebase.cloud.FirestoreClient;
-import edu.famu.thecoldestmarket.Model.Business;
 import edu.famu.thecoldestmarket.Model.User;
 import org.springframework.stereotype.Service;
 
