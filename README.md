@@ -26,6 +26,7 @@ The Coldest presents an online marketplace which allows consumers to find local 
 - Each user (Consumer) must have a profile.
 - Each user (Owner) must have a digital storefront.
 - Settings (Accessibility, Notifications, Privacy, Location)
+- User authentication for login. (DONE)
 
 **Optional Nice-to-have Stories**
 - User (Consumer) can log in to see past stores they have purchased from.
@@ -71,4 +72,5 @@ Optional:
 
 ## Networking
 ![Picture of network](Milestone_network.png)
+
   
