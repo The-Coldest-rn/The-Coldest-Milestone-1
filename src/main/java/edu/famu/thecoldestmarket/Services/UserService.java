@@ -24,7 +24,6 @@ public class UserService {
     {
         User user = null;
         if(document.exists()){
-            ArrayList<String> amenities = null;
             user = new User(document.getId(),document.getString("first_name"),document.getString("last_name"),document.getString("password"),document.getString("phone"),document.getString("username"));
         }
         return user;
