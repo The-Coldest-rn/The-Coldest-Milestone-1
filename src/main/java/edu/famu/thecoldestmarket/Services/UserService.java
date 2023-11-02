@@ -14,24 +14,24 @@ import java.util.concurrent.ExecutionException;
 
 @Service
 public class UserService {
-    private Firestore firestore;
+    private final Firestore firestore;
 
     public UserService() {
         this.firestore = FirestoreClient.getFirestore();
     }
 
-    private User documentSnapshotToUsers(DocumentSnapshot document)
+    private static User documentSnapshotToUsers(DocumentSnapshot document)
     {
         User user = null;
         if(document.exists()){
-            user = new User(document.getId(),document.getString("first_name"),document.getString("last_name"),document.getString("password"),document.getString("phone"),document.getString("username"));
+            user = new User(document.getId(),document.getString("email"),document.getString("last_name"),document.getString("password"),document.getString("phone"));
         }
-        return user;
+        return null;//user;
     }
 
     public ArrayList<User> getAllUsers() throws ExecutionException, InterruptedException
     {
-        CollectionReference userCollection = firestore.collection("Users");
+        CollectionReference userCollection = firestore.collection("User");
         ApiFuture<QuerySnapshot> future = userCollection.get();
 
         ArrayList<User> userList = new ArrayList<>();
@@ -45,7 +45,7 @@ public class UserService {
     }
 
     public User getUserById(String userID) throws ExecutionException, InterruptedException {
-        CollectionReference userCollection = firestore.collection("Users");
+        CollectionReference userCollection = firestore.collection("User");
         ApiFuture<DocumentSnapshot> future = userCollection.document(userID).get();
         DocumentSnapshot document = future.get();
 

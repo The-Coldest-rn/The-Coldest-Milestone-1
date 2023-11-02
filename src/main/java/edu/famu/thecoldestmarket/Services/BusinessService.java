@@ -14,7 +14,7 @@ import java.util.concurrent.ExecutionException;
 
 @Service
 public class BusinessService {
-    private Firestore firestore;
+    private final Firestore firestore;
 
     public BusinessService() {
         this.firestore = FirestoreClient.getFirestore();
@@ -24,15 +24,15 @@ public class BusinessService {
     {
         Business business = null;
         if(document.exists()){
-            ArrayList<String> amenities = null;
-            business = new Business(document.getId(),document.getString("address"),document.getString("businessType"),document.getString("images"),document.getString("name"),document.getString("website"));
+            ArrayList<String> images = (ArrayList<String>) document.get("images");;
+            business = new Business(document.getId(),document.getString("address"),document.getString("businessType"),images,document.getString("name"),document.getString("website"));
         }
-        return business;
+        return null;
     }
 
     public ArrayList<Business> getAllBusinesses() throws ExecutionException, InterruptedException
     {
-        CollectionReference businessCollection = firestore.collection("Businesses");
+        CollectionReference businessCollection = firestore.collection("Business");
         ApiFuture<QuerySnapshot> future = businessCollection.get();
 
         ArrayList<Business> businessList = new ArrayList<>();
@@ -46,7 +46,7 @@ public class BusinessService {
     }
 
     public Business getBusinessById(String businessID) throws ExecutionException, InterruptedException {
-        CollectionReference businessCollection = firestore.collection("Businesses");
+        CollectionReference businessCollection = firestore.collection("Business");
         ApiFuture<DocumentSnapshot> future = businessCollection.document(businessID).get();
         DocumentSnapshot document = future.get();
 
