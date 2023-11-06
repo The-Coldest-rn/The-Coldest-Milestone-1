@@ -20,6 +20,4 @@ public class User {
     private String phone;
 
 
-    public User(String id, String email, String lastName, String password, String phone) {
-    }
 }

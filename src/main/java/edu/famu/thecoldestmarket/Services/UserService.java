@@ -24,9 +24,9 @@ public class UserService {
     {
         User user = null;
         if(document.exists()){
-            user = new User(document.getId(),document.getString("email"),document.getString("last_name"),document.getString("password"),document.getString("phone"));
+            user = new User(document.getId(),document.getString("username"),document.getString("email"),document.getString("last_name"),document.getString("password"),document.getString("phone"));
         }
-        return null;//user;
+        return user;
     }
 
     public ArrayList<User> getAllUsers() throws ExecutionException, InterruptedException

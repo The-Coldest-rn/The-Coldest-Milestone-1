@@ -27,7 +27,7 @@ public class BusinessService {
             ArrayList<String> images = (ArrayList<String>) document.get("images");;
             business = new Business(document.getId(),document.getString("address"),document.getString("businessType"),images,document.getString("name"),document.getString("website"));
         }
-        return null;
+        return business;
     }
 
     public ArrayList<Business> getAllBusinesses() throws ExecutionException, InterruptedException
