@@ -1,15 +1,12 @@
 package edu.famu.thecoldestmarket.Services;
 
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.CollectionReference;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.QuerySnapshot;
+import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import edu.famu.thecoldestmarket.Model.Business;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 @Service
@@ -51,5 +48,31 @@ public class BusinessService {
         DocumentSnapshot document = future.get();
 
         return documentSnapshotToBusinesses(document);
+    }
+
+    public String createBusiness(Business business) throws ExecutionException, InterruptedException {
+        String businessID = null;
+
+        ApiFuture<DocumentReference> future = firestore.collection("Business").add(business);
+        DocumentReference postRef = future.get();
+        businessID = postRef.getId();
+
+        return businessID;
+    }
+
+    public void updateBusiness(String id, Map<String, String> updateValues){
+
+        String [] allowed = {"name", "address", "website"};
+        List<String> list = Arrays.asList(allowed);
+        Map<String, Object> formattedValues = new HashMap<>();
+
+        for(Map.Entry<String, String> entry : updateValues.entrySet()) {
+            String key = entry.getKey();
+            if(list.contains(key))
+                formattedValues.put(key, entry.getValue());
+        }
+
+        DocumentReference businessDoc = firestore.collection("Business").document(id);
+        businessDoc.update(formattedValues);
     }
 }
