@@ -51,7 +51,7 @@ public class UserController {
     }
 
 
-    @PutMapping("/{username}/")
+    @PutMapping("/{username}")
     public ResponseEntity<ApiResponse> updateUser(@PathVariable(name="username") String id, @RequestBody Map<String,String> data)
     {
         try{
@@ -62,7 +62,7 @@ public class UserController {
         }
     }
 
-    @DeleteMapping("/{username}/")
+    @DeleteMapping("/{username}")
     public ResponseEntity<ApiResponse> deleteUser(@PathVariable(name="username") String id) {
         try {
             userService.deleteUser(id);
