@@ -58,4 +58,15 @@ public class BusinessController {
             return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred", null, e.getMessage()));
         }
     }
+
+    @DeleteMapping("/{businessId}")
+    public ResponseEntity<ApiResponse> deleteBusiness(@PathVariable(name="businessId") String id) {
+        try {
+            businessService.deleteBusiness(id);
+            return ResponseEntity.ok(new ApiResponse(true, "Business successfully deleted", null, null));
+        }
+        catch (Exception e) {
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+    }
 }

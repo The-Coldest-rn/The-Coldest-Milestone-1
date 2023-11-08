@@ -61,4 +61,15 @@ public class UserController {
             return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred", null, e.getMessage()));
         }
     }
+
+    @DeleteMapping("/{username}/")
+    public ResponseEntity<ApiResponse> deleteUser(@PathVariable(name="username") String id) {
+        try {
+            userService.deleteUser(id);
+            return ResponseEntity.ok(new ApiResponse(true, "User successfully deleted", null, null));
+        }
+        catch (Exception e) {
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+    }
 }

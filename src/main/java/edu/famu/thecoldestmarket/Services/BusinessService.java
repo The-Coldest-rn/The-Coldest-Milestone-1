@@ -75,4 +75,14 @@ public class BusinessService {
         DocumentReference businessDoc = firestore.collection("Business").document(id);
         businessDoc.update(formattedValues);
     }
+
+    public void deleteBusiness(String id)
+    {
+        CollectionReference businessCollection = firestore.collection("Business");
+        DocumentReference businessDoc = businessCollection.document(id);
+
+        if (businessDoc != null) {
+            businessDoc.delete();
+        }
+    }
 }

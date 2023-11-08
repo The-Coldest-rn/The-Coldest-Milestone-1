@@ -74,4 +74,14 @@ public class UserService {
         DocumentReference userDoc = firestore.collection("User").document(id);
         userDoc.update(formattedValues);
     }
+
+    public void deleteUser(String id)
+    {
+        CollectionReference userCollection = firestore.collection("User");
+        DocumentReference userDoc = userCollection.document(id);
+
+        if (userDoc != null) {
+            userDoc.delete();
+        }
+    }
 }
