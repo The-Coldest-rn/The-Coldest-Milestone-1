@@ -73,4 +73,7 @@ Optional:
 ## Networking
 ![Picture of network](Milestone_network.png)
 
-  
+
+## GIF Walkthroughs
+[Walkthrough 1](The_Coldest_Market_.gif)
+[Walkthrough 2](The_Coldest_Market_1.gif)
