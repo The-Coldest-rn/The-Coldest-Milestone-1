@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../The coldest market.png';
+import logo from '../The_coldest_market.png';
 
 function Menu(props) {
     return (
