@@ -62,7 +62,7 @@ public class BusinessService {
 
     public void updateBusiness(String id, Map<String, String> updateValues){
 
-        String [] allowed = {"name", "address", "website"};
+        String [] allowed = { "address", "businessType", "images", "name", "website"};
         List<String> list = Arrays.asList(allowed);
         Map<String, Object> formattedValues = new HashMap<>();
 
