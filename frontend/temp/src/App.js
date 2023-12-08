@@ -1,5 +1,3 @@
-
-import logo from "./components/Menu";
 import './App.css';
 import Menu from "./components/Menu";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -14,17 +12,17 @@ import Results from './pages/Results';
 function App() {
   return (
       <Router>
-    <div className="App">
-      <Menu element={<logo />} />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/map" element={<Map />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/results" element={<Results />} />
-      </Routes>
-    </div>
+        <div className="App">
+          <Menu element={<logo />} />
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/map" element={<Map />} />
+              <Route path="/account" element={<Account />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/results" element={<Results />} />
+            </Routes>
+        </div>
       </Router>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import '../App.css';
 
-const apiUrl = 'http://localhost:3000'; // Assuming your backend runs on port 3000
+const apiUrl = 'http://localhost:3000/user';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -22,7 +22,6 @@ function Login() {
 
             if (data.success) {
                 console.log('Login successful', data.user);
-                // Redirect to the map page after successful login
                 navigate('/map');
             } else {
                 console.error('Login failed', data.message);

@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Change the font-family as needed */
-    background: url('temp/src/Market.jpg') center/cover fixed no-repeat;
+    background: url('/Users/reyno/OneDrive/Documents/GitHub/The-Coldest-Milestone-1/frontend/temp/src/Market.jpg') center/cover fixed no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

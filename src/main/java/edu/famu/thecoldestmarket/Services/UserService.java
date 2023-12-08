@@ -22,7 +22,7 @@ public class UserService {
     private static User documentSnapshotToUsers(DocumentSnapshot document) {
         User user = null;
         if (document.exists()) {
-            user = new User(document.getId(), document.getString("username"), document.getString("email"), document.getString("last_name"), document.getString("password"), document.getString("phone"));
+            user = new User(document.getId(), document.getString("username"), document.getString("email"),document.getString("first_name"), document.getString("last_name"), document.getString("password"), document.getString("phone"));
         }
         return user;
     }

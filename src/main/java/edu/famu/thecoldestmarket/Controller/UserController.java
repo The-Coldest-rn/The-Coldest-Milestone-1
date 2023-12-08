@@ -78,8 +78,6 @@ public class UserController {
         try {
             ApiResponse response = userService.loginUser(username, password);
             if (response.success()) {
-                // Redirect to the map page
-                // Example: return ResponseEntity.ok(new ApiResponse(true, "Login successful", "/map"));
                 return ResponseEntity.ok(response);
             } else {
                 // Handle unsuccessful login

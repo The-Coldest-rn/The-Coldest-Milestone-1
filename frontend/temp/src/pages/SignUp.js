@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
-const apiUrl = 'http://localhost:3000/signup'; // Assuming your backend runs on port 3000
+const apiUrl = 'http://localhost:3000/user'; // Assuming your backend runs on port 3000
 
 function SignUp() {
     const [username, setUsername] = useState('');

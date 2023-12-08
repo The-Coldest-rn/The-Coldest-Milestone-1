@@ -12,7 +12,8 @@ import lombok.NoArgsConstructor;
 public class User {
 
 @DocumentId
-    private @Nullable String username;
+    private @Nullable String userID;
+    private String username;
     private String email;
     private String first_name;
     private String last_Name;
