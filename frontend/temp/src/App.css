@@ -41,6 +41,40 @@ body {
   }
 }
 
+<<<<<<< Updated upstream
 .custom-space {
   margin-bottom: 25px; /* Adjust the value as needed */
 }
+=======
+/* Update your App.css file with the following styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif; /* Use a suitable font */
+}
+
+.container {
+  max-width: 400px; /* Adjust the max-width based on your design */
+  width: 100%;
+}
+
+/* Add more styles as needed for individual components or elements */
+
+/* Media query for iPhone-like layout */
+@media only screen and (max-width: 375px) {
+  body {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    padding: 10px; /* Add padding for better spacing on smaller screens */
+  }
+
+  /* Add more specific styles for smaller screens as needed */
+}
+>>>>>>> Stashed changes

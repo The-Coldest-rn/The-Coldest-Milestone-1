@@ -72,4 +72,21 @@ public class UserController {
             return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
         }
     }
+
+    @GetMapping("/login")
+    public ResponseEntity<ApiResponse> loginUser(@RequestParam String username, @RequestParam String password) {
+        try {
+            ApiResponse response = userService.loginUser(username, password);
+            if (response.success()) {
+                // Redirect to the map page
+                // Example: return ResponseEntity.ok(new ApiResponse(true, "Login successful", "/map"));
+                return ResponseEntity.ok(response);
+            } else {
+                // Handle unsuccessful login
+                return ResponseEntity.badRequest().body(response);
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+    }
 }

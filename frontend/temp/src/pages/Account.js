@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../App.css';
 function Account() {
     return (
         <div className="container mt-5">
@@ -10,7 +10,7 @@ function Account() {
                 <div className="card-body">
                     {/* User details */}
                     <h5 className="card-title">John Doe</h5>
-                    <p className="card-text">Username: johndoe123</p>
+                    <p className="card-text">Username: john doe123</p>
                     <p className="card-text">Email: john.doe@example.com</p>
                     <p className="card-text">Phone Number: (555) 123-4567</p>
                     {/* Add more user details as needed */}

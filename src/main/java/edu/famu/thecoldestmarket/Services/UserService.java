@@ -5,6 +5,7 @@ import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import edu.famu.thecoldestmarket.Model.Business;
 import edu.famu.thecoldestmarket.Model.User;
+import edu.famu.thecoldestmarket.util.ApiResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -84,4 +85,26 @@ public class UserService {
             userDoc.delete();
         }
     }
+
+    public ApiResponse loginUser(String username, String password) {
+        try {
+            CollectionReference userCollection = firestore.collection("User");
+            Query query = userCollection.whereEqualTo("username", username).whereEqualTo("password", password);
+            ApiFuture<QuerySnapshot> future = query.get();
+            List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+
+            if (!documents.isEmpty()) {
+                // User found, login successful
+                return new ApiResponse(true, "Login successful", null, "Success");
+            } else {
+                // User not found or password incorrect
+                return new ApiResponse(false, "Invalid username or password", null, "Not found or password incorrect");
+            }
+        } catch (ExecutionException | InterruptedException e) {
+            return new ApiResponse(false, "An error occurred", null, e.getMessage());
+        }
+    }
+
+
+
 }

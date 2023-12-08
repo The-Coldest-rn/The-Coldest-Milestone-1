@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../App.css';
 function Settings() {
     return (
         <div className="container mt-5">
