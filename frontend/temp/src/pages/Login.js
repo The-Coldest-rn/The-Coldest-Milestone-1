@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import '../App.css';
+import logo from '../TCM1.png';
 
 const apiUrl = 'http://localhost:3000/user';
 
@@ -33,6 +34,9 @@ function Login() {
 
     return (
         <div className="container mt-5">
+            <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
+                <img src={logo} width="450" height="350" alt="The Coldest Market Logo" />
+            </a>
             <h1>Login</h1>
             <form>
                 <div className="mb-3 custom-space">

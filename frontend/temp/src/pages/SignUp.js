@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
+import logo2 from "../CAA.png";
 
 const apiUrl = 'http://localhost:3000/user'; // Assuming your backend runs on port 3000
 
@@ -41,16 +42,19 @@ function SignUp() {
 
     return (
         <div className="container mt-5">
+            <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
+                <img src={logo2} width="450" height="350" alt="Create An Account Logo" />
+            </a>
             <h1>Create An Account</h1>
-            <div>
+            <div className="mb-3 custom-space">
                 <label>Username:</label>
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
             </div>
-            <div>
+            <div className="mb-3 custom-space">
                 <label>Password:</label>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <div>
+            <div className="mb-3 custom-space">
                 <label>Confirm Password:</label>
                 <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
             </div>
