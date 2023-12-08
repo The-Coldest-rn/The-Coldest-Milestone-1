@@ -42,15 +42,15 @@ function SignUp() {
     return (
         <div className="container mt-5">
             <h1>Create An Account</h1>
-            <div>
+            <div className="mb-3 custom-space">
                 <label>Username:</label>
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
             </div>
-            <div>
+            <div className="mb-3 custom-space">
                 <label>Password:</label>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <div>
+            <div className="mb-3 custom-space">
                 <label>Confirm Password:</label>
                 <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
             </div>

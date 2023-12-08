@@ -6,7 +6,7 @@ function Menu(props) {
         <nav className="navbar navbar-expand-md bg-body py-3">
             <div className="container">
                 <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
-                    <img src={logo} width="450" height="350" alt="Belizean Breeze Airlines Logo" />
+                    <img src={logo} width="450" height="350" alt="The Coldest Market Logo" />
                 </a>
                 <div id="navcol-2" className="collapse navbar-collapse"></div>
             </div>
