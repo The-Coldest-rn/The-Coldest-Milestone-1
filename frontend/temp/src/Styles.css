@@ -1,0 +1,23 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Change the font-family as needed */
+    background: url('temp/src/Market.jpg') center/cover fixed no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (fourth value) for transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    z-index: 1; /* Ensure that the content appears above the overlay */
+}

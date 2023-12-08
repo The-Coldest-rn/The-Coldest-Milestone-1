@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from "./components/Menu";
 import './App.css';
 import Menu from "./components/Menu";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -9,11 +9,12 @@ import Account from './pages/Account';
 import Settings from './pages/Settings';
 import Results from './pages/Results';
 
+
 function App() {
   return (
       <Router>
     <div className="App">
-      <Menu />
+      <Menu element={<logo />} />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

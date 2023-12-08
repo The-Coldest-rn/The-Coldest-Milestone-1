@@ -17,30 +17,34 @@ function Login() {
         <div className="container mt-5">
             <h1>Login</h1>
             <form>
-                <div className="mb-3">
-                    <label htmlFor="username" className="form-label">Username</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
+                <div className="mb-3 custom-space">
+                        <label htmlFor="username" className="form-label">Username</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
                 </div>
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
+                <div className="mb-3 custom-space">
+                        <label htmlFor="password" className="form-label">Password</label>
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                 </div>
-                <button type="button" className="btn btn-primary" onClick={handleLogin}>Login</button>
+                <div className="row">
+                    <div className="col">
+                <button type="button" width="50" className="btn btn-primary" onClick={handleLogin}>Login</button>
+                    </div>
+                </div>
             </form>
             <p className="mt-3">
-                Don't have an account? <Link to="/signup">Sign up here</Link>.
+                Don't have an account? <Link to="/signup">Sign up here</Link>
             </p>
         </div>
     );
