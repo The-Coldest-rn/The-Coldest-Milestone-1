@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import '../App.css';
 import logo from '../TCM1.png';
 
-const apiUrl = 'http://localhost:3000/user';
+const apiUrl = 'http://localhost:8080/';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ function Login() {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch(`${apiUrl}/login?username=${username}&password=${password}`, {
+            const response = await fetch(`${apiUrl}/user/login?username=${username}&password=${password}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ function Login() {
 
             if (data.success) {
                 console.log('Login successful', data.user);
-                navigate('/map');
+                navigate('http://localhost:3000/user/map');
             } else {
                 console.error('Login failed', data.message);
             }
@@ -40,33 +40,42 @@ function Login() {
             <h1>Login</h1>
             <form>
                 <div className="mb-3 custom-space">
-                        <label htmlFor="username" className="form-label">Username</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
+                    <label htmlFor="username" className="form-label">
+                        Username
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
                 </div>
                 <div className="mb-3 custom-space">
-                        <label htmlFor="password" className="form-label">Password</label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
+                    <label htmlFor="password" className="form-label">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
                 <div className="row">
                     <div className="col">
-                <button type="button" width="50" className="btn btn-primary" onClick={handleLogin}>Login</button>
+                        {/* Use Link to navigate to the desired page */}
+                        <Link to="http://localhost:3000/user/map">
+                            <button type="button" className="btn btn-primary" onClick={handleLogin}>
+                                Login
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </form>
             <p className="mt-3">
-                Don't have an account? <Link to="/signup">Sign up here</Link>
+                Don't have an account? <Link to="/user/signup">Sign up here</Link>
             </p>
         </div>
     );

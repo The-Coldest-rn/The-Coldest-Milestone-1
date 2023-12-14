@@ -104,7 +104,4 @@ public class UserService {
             return new ApiResponse(false, "An error occurred", null, e.getMessage());
         }
     }
-
-
-
 }

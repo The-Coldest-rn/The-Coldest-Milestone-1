@@ -10,21 +10,21 @@ import Results from './pages/Results';
 
 
 function App() {
-  return (
-      <Router>
-        <div className="App">
-          <Menu element={<logo />} />
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/map" element={<Map />} />
-              <Route path="/account" element={<Account />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/results" element={<Results />} />
-            </Routes>
-        </div>
-      </Router>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Menu element={<logo />} />
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/user/signup" element={<SignUp />} />
+                    <Route path="/user/map" element={<Map />} />
+                    <Route path="/user/account" element={<Account />} />
+                    <Route path="/user/settings" element={<Settings />} />
+                    <Route path="/user/results" element={<Results />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

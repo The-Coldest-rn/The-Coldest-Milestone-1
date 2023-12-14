@@ -1,14 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import React, { useState, useEffect } from 'react';
+import {
+    withGoogleMap,
+    GoogleMap,
+    Marker,
+} from 'react-google-maps';
 import { StandaloneSearchBox } from 'react-google-maps/lib/components/places/StandaloneSearchBox';
-import '../App.css';
 
 const Map = withGoogleMap((props) => {
-    const { searchBox, searchBoxPlaces, mapRef, handlePlacesChanged } = props;
+    const { searchBox, searchBoxPlaces, handlePlacesChanged } = props;
 
     return (
         <GoogleMap
-            ref={mapRef}
             defaultZoom={10}
             defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
         >
@@ -54,19 +56,10 @@ const Map = withGoogleMap((props) => {
 function MapPage() {
     const [searchBox, setSearchBox] = useState(null);
     const [searchBoxPlaces, setSearchBoxPlaces] = useState([]);
-    const mapRef = useRef(null);
 
     const handlePlacesChanged = () => {
         const places = searchBox.getPlaces();
         setSearchBoxPlaces(places);
-
-        if (mapRef.current && places.length > 0) {
-            const bounds = new window.google.maps.LatLngBounds();
-            places.forEach((place) => {
-                bounds.extend(place.geometry.location);
-            });
-            mapRef.current.fitBounds(bounds);
-        }
     };
 
     useEffect(() => {
@@ -77,7 +70,7 @@ function MapPage() {
         document.head.appendChild(script);
 
         script.onload = () => {
-            // Initialization logic if needed
+
         };
 
         return () => {
@@ -88,14 +81,13 @@ function MapPage() {
     return (
         <div>
             <h1>Map</h1>
-            <div style={{ width: '100%', height: '500px' }}>
-                <Map
-                    searchBox={setSearchBox}
-                    searchBoxPlaces={searchBoxPlaces}
-                    mapRef={mapRef}
-                    handlePlacesChanged={handlePlacesChanged}
-                />
-            </div>
+            <Map
+                containerElement={<div style={{ height: '500px', width: '100%' }} />}
+                mapElement={<div style={{ height: '100%' }} />}
+                searchBox={(map) => setSearchBox(map)}
+                searchBoxPlaces={searchBoxPlaces}
+                handlePlacesChanged={handlePlacesChanged}
+            />
         </div>
     );
 }

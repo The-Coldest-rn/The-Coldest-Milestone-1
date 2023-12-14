@@ -11,19 +11,19 @@ function Menu() {
                             <Link to="/" className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/signup" className="nav-link">Sign Up</Link>
+                            <Link to="/user/signup" className="nav-link">Sign Up</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/map" className="nav-link">Map</Link>
+                            <Link to="/user/map" className="nav-link">Map</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/account" className="nav-link">Account</Link>
+                            <Link to="/user/account" className="nav-link">Account</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/settings" className="nav-link">Settings</Link>
+                            <Link to="/user/settings" className="nav-link">Settings</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/results" className="nav-link">Results</Link>
+                            <Link to="/user/results" className="nav-link">Results</Link>
                         </li>
                     </ul>
                 </div>
