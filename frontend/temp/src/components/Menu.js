@@ -22,9 +22,6 @@ function Menu() {
                         <li className="nav-item">
                             <Link to="/user/settings" className="nav-link">Settings</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link to="/user/results" className="nav-link">Results</Link>
-                        </li>
                     </ul>
                 </div>
             </div>

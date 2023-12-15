@@ -76,9 +76,7 @@ function MapPage() {
 
         script.onload = () => {
             // The 'google' object is now defined, and the API is fully loaded
-            window.initMap = () => {
-                // You can put any additional initialization logic here
-            };
+            window.google = window.google || {};
         };
 
         return () => {
