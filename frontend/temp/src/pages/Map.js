@@ -9,6 +9,11 @@ import { StandaloneSearchBox } from 'react-google-maps/lib/components/places/Sta
 const Map = withGoogleMap((props) => {
     const { searchBox, searchBoxPlaces, handlePlacesChanged } = props;
 
+    // Check if google is defined before using it
+    if (typeof google === 'undefined') {
+        return null; // or any other fallback or loading mechanism
+    }
+
     return (
         <GoogleMap
             defaultZoom={10}
@@ -67,11 +72,15 @@ function MapPage() {
         script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAPHbuBIGROvAsy7fvE_H0bzk5ZgEh_1kU&v=3.exp&libraries=geometry,drawing,places`;
         script.async = true;
         script.defer = true;
-        document.head.appendChild(script);
 
         script.onload = () => {
-
+            window.google = window.google || {};
+            window.initMap = () => {
+                // You can put any additional initialization logic here
+            };
         };
+
+        document.head.appendChild(script);
 
         return () => {
             document.head.removeChild(script);
@@ -82,7 +91,7 @@ function MapPage() {
         <div>
             <h1>Map</h1>
             <Map
-                containerElement={<div style={{ height: '500px', width: '100%' }} />}
+                containerElement={<div style={{ height: '500px', width: '500px' }} />}
                 mapElement={<div style={{ height: '100%' }} />}
                 searchBox={(map) => setSearchBox(map)}
                 searchBoxPlaces={searchBoxPlaces}

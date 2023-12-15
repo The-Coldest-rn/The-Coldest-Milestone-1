@@ -46,6 +46,14 @@ body {
   margin-bottom: 25px; /* Adjust the value as needed */
 }
 
+.custom-spaceTop {
+  margin-top: 45px; /* Adjust the value as needed */
+}
+
+.custom-spaceHeadTop {
+  margin-top: 100px; /* Adjust the value as needed */
+}
+
 /* Update your App.css file with the following styles */
 
 body {
@@ -76,5 +84,10 @@ body {
   }
 
   /* Add more specific styles for smaller screens as needed */
+}
+
+.tab-button {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 

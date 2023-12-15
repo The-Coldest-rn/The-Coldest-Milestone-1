@@ -41,9 +41,9 @@ function SignUp() {
     };
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 custom-spaceTop">
             <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
-                <img src={logo2} width="450" height="350" alt="Create An Account Logo" />
+                <img src={logo2} width="350" height="250" alt="Create An Account Logo" />
             </a>
             <h1>Create An Account</h1>
             <div className="mb-3 custom-space">
