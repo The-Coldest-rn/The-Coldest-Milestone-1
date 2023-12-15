@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom';
+import setting from '../setting.png';
 import { useNavigate } from 'react-router-dom';
+
 function Settings() {
     const navigate = useNavigate();
 
@@ -11,7 +12,10 @@ function Settings() {
     return (
         <div className="container mt-5">
             <h1>Settings</h1>
-            <div className="mb-3 custom-space">
+            <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
+                <img src={setting} width="200" height="200" alt="Setting Logo" />
+            </a>
+            <div className="mb-3 custom-spaceTop">
                 <label htmlFor="language" className="form-label">Language</label>
                 {/* Dropdown for language selection */}
                 <select className="form-select" id="language">

@@ -33,9 +33,9 @@ function Login() {
     };
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 custom-spaceTop">
             <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
-                <img src={logo} width="450" height="350" alt="The Coldest Market Logo" />
+                <img src={logo} width="350" height="250" alt="The Coldest Market Logo" />
             </a>
             <h1>Login</h1>
             <form>

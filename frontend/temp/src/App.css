@@ -50,6 +50,10 @@ body {
   margin-top: 45px; /* Adjust the value as needed */
 }
 
+.custom-spaceHeadTop {
+  margin-top: 100px; /* Adjust the value as needed */
+}
+
 /* Update your App.css file with the following styles */
 
 body {

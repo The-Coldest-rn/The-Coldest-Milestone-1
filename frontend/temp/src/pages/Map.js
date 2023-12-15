@@ -72,7 +72,7 @@ function MapPage() {
         script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAPHbuBIGROvAsy7fvE_H0bzk5ZgEh_1kU&v=3.exp&libraries=geometry,drawing,places`;
         script.async = true;
         script.defer = true;
-        
+
         script.onload = () => {
             window.google = window.google || {};
             window.initMap = () => {
