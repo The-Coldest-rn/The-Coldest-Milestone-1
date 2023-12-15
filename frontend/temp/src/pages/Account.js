@@ -4,6 +4,7 @@ import profpic from '../profile.png';
 function Account() {
     return (
         <div className="container mt-5">
+            <a className="navbar-brand d-flex align-items-center justify-content-center" href="#"></a>
             <h1>My Account</h1>
             <div className="card" style={{ width: '18rem' }}>
                 {/* User profile image */}

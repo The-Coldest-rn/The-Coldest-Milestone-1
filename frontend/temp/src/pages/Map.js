@@ -72,12 +72,15 @@ function MapPage() {
         script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAPHbuBIGROvAsy7fvE_H0bzk5ZgEh_1kU&v=3.exp&libraries=geometry,drawing,places`;
         script.async = true;
         script.defer = true;
-        document.head.appendChild(script);
-
+        
         script.onload = () => {
-            // The 'google' object is now defined, and the API is fully loaded
             window.google = window.google || {};
+            window.initMap = () => {
+                // You can put any additional initialization logic here
+            };
         };
+
+        document.head.appendChild(script);
 
         return () => {
             document.head.removeChild(script);
