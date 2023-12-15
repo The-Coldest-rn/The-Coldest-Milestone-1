@@ -16,7 +16,7 @@ function Account() {
                     {/* Add more user details as needed */}
                 </div>
             </div>
-            <div className="mt-3">
+            <div className="mt-3 custom-space">
                 {/* Change password form */}
                 <h3>Change Password</h3>
                 <form>
