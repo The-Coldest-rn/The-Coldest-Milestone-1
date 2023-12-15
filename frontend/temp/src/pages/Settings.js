@@ -20,7 +20,7 @@ function Settings() {
                 {/* Dropdown for language selection */}
                 <select className="form-select" id="language">
                     <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
+                    <option value="spanish">Español</option>
                     {/* Add more language options as needed */}
                 </select>
             </div>

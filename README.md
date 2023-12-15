@@ -76,5 +76,8 @@ Optional:
 
 
 ## GIF Walkthroughs
-[Walkthrough 1](The_Coldest_Market_.gif)
-[Walkthrough 2](The_Coldest_Market_1.gif)
+![Walkthrough 1](The_Coldest_Market_.gif)
+![Walkthrough 2](The_Coldest_Market_1.gif)
+## Final Product
+![Walkthrough 3](https://i.imgur.com/66k7FGo.gif)
+
