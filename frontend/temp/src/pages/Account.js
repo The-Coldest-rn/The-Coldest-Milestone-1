@@ -7,7 +7,7 @@ function Account() {
         <div className="container-fluid mt-5 text-center">
             <a className="navbar-brand d-flex" href="#"></a>
             <h1>My Account</h1>
-            <div className="container align-items-center justify-content-center" style={{ width: '18rem' }}>
+            <div className="container align-items-center justify-content-center" style={{ width: '18rem', padding: '10px 150px', borderRadius: '5px' }}>
                 {/* User profile image */}
                 <img src={profpic} className="card-img-top circle-image" alt="Profile" style={{ borderRadius: '70%', margin: '0 auto' }} />
                 <div className="card-body">
