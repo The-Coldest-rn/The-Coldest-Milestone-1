@@ -78,3 +78,8 @@ body {
   /* Add more specific styles for smaller screens as needed */
 }
 
+.tab-button {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+

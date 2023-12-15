@@ -4,10 +4,10 @@ import profpic from '../profile.png';
 function Account() {
     return (
         <div className="container mt-5">
-            <h1>Account</h1>
+            <h1>My Account</h1>
             <div className="card" style={{ width: '18rem' }}>
                 {/* User profile image */}
-                <img src={profpic} className="card-img-top align-items-center justify-content-center" alt="Profile" />
+                <img src={profpic} className="card-img-top circle-image align-items-center justify-content-center" alt="Profile" style={{ borderRadius: '70%'}}/>
                 <div className="card-body">
                     {/* User details */}
                     <h2 className="card-title">John Doe</h2>
