@@ -1,4 +1,5 @@
 import './App.css';
+import './Styles.css';
 import Menu from "./components/Menu";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Login from './pages/Login';
@@ -8,11 +9,16 @@ import Account from './pages/Account';
 import Settings from './pages/Settings';
 import Results from './pages/Results';
 
+// New Overlay component
+const Overlay = () => {
+    return <div className="overlay"></div>;
+};
 
 function App() {
     return (
         <Router>
             <div className="App">
+                <Overlay />
                 <Menu element={<logo />} />
                 <Routes>
                     <Route path="/" element={<Login />} />
