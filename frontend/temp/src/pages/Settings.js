@@ -15,7 +15,7 @@ function Settings() {
             <a className="navbar-brand d-flex align-items-center justify-content-center" href="#">
                 <img src={setting} width="200" height="200" alt="Setting Logo" />
             </a>
-            <div className="mb-3 custom-spaceTop">
+            <div className="mb-3 custom-space">
                 <label htmlFor="language" className="form-label">Language</label>
                 {/* Dropdown for language selection */}
                 <select className="form-select" id="language">

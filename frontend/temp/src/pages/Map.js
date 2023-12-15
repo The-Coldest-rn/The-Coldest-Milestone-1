@@ -8,7 +8,6 @@ import { StandaloneSearchBox } from 'react-google-maps/lib/components/places/Sta
 
 const Map = withGoogleMap((props) => {
     const { searchBox, searchBoxPlaces, handlePlacesChanged } = props;
-
     // Check if google is defined before using it
     if (typeof google === 'undefined') {
         return null; // or any other fallback or loading mechanism

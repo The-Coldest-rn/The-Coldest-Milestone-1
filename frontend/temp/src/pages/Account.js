@@ -1,14 +1,15 @@
 import React from 'react';
 import '../App.css';
 import profpic from '../profile.png';
+
 function Account() {
     return (
-        <div className="container mt-5">
-            <a className="navbar-brand d-flex align-items-center justify-content-center" href="#"></a>
+        <div className="container-fluid mt-5 text-center">
+            <a className="navbar-brand d-flex" href="#"></a>
             <h1>My Account</h1>
-            <div className="card" style={{ width: '18rem' }}>
+            <div className="container align-items-center justify-content-center" style={{ width: '18rem' }}>
                 {/* User profile image */}
-                <img src={profpic} className="card-img-top circle-image align-items-center justify-content-center" alt="Profile" style={{ borderRadius: '70%'}}/>
+                <img src={profpic} className="card-img-top circle-image" alt="Profile" style={{ borderRadius: '70%', margin: '0 auto' }} />
                 <div className="card-body">
                     {/* User details */}
                     <h2 className="card-title">John Doe</h2>
